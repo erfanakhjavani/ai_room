@@ -1,29 +1,23 @@
 
 
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 
-import 'home.dart';
+import 'package:ai_room/screens/main_screen.dart';
+import 'package:flutter/material.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp
-  ]);
-
-  runApp(const Main());
+  runApp(const MyApp());
 }
-class Main extends StatelessWidget {
-  const Main({super.key});
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  const GetMaterialApp(
+    return  MaterialApp(
+      theme: ThemeData(fontFamily: 'Irs',),
       debugShowCheckedModeBanner: false,
-      home: Home(),
-
-
+      title: 'اپلیکیشن مدیریت مالی',
+      home: const MainScreen(),
     );
   }
 }
