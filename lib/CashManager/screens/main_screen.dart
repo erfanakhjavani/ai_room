@@ -1,7 +1,8 @@
-import 'package:ai_room/screens/home_screen.dart';
+
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
+import 'home_screen.dart';
 import 'info_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -13,6 +14,8 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+
+
   int currentIndex = 0;
   Widget body =  const HomeScreen();
 
